@@ -61,6 +61,9 @@ Keyboard.setKeyboardStyle = function(style) {
     console.warn("Keyboard.setKeyboardStyle() not supported in Android");
 };
 
+// compatibility
+Keyboard.close = Keyboard.hide;
+
 channel.onCordovaReady.subscribe(function () {
     exec(success, null, 'CDVIonicKeyboard', 'init', []);
 

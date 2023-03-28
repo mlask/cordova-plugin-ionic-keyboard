@@ -98,6 +98,9 @@ Keyboard.setKeyboardStyle = function(style) {
     exec(null, null, "CDVIonicKeyboard", "keyboardStyle", [style]);
 };
 
+// compatibility
+Keyboard.close = Keyboard.hide;
+
 Keyboard.isVisible = false;
 
 module.exports = Keyboard;
